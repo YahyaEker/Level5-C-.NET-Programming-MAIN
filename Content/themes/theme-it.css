@@ -1,0 +1,60 @@
+/* IT Department Theme - Dark / Orange */
+
+body.theme-it {
+    --body-bg: #1a120b;
+    --text-color: #f5e6d3;
+    --header-bg: #2a1810;
+    --header-text: #fff7ed;
+    --footer-bg: #120c08;
+    --footer-text: #fdba74;
+    --accent-color: #f97316;
+    --heading-color: #ffedd5;
+    --link-color: #fb923c;
+    --link-hover: #fdba74;
+    --btn-primary-bg: #ea580c;
+    --btn-primary-hover: #c2410c;
+    --btn-success-bg: #f97316;
+    --btn-success-hover: #ea580c;
+    --btn-secondary-bg: #57534e;
+    --btn-secondary-hover: #44403c;
+    --card-bg: #292017;
+    --panel-bg: #3f2e22;
+    --panel-border: #7c2d12;
+    --input-bg: #1c1410;
+    --input-border: #9a3412;
+    --readonly-bg: #1c1410;
+    --label-color: #fed7aa;
+    --muted-text: #fdba74;
+    --focus-ring: rgba(249, 115, 22, 0.35);
+}
+
+body.theme-it .form-control {
+    color: #ffedd5;
+}
+
+body.theme-it .login-hint code {
+    background: #7c2d12;
+    color: #ffedd5;
+}
+
+body.theme-it .data-grid-header th {
+    background: #9a3412;
+}
+
+body.theme-it .alert-success {
+    background: #422006;
+    color: #fed7aa;
+    border-color: #f97316;
+}
+
+body.theme-it .alert-error {
+    background: #450a0a;
+    color: #fecaca;
+    border-color: #f87171;
+}
+
+body.theme-it .alert-info {
+    background: #431407;
+    color: #ffedd5;
+    border-color: #fb923c;
+}

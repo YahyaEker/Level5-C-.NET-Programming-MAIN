@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f3f4f6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 30px 15px;
+            margin: 0;
+        }
+        .dashboard-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .page-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 35px;
+            border-top: 5px solid #10b981; /* Dashboard Başarı Rengi */
+        }
+        .page-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 6px;
+        }
+        .page-subtitle {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 25px;
+        }
+        .quick-links {
+            margin-bottom: 25px;
+        }
+        .search-panel {
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .search-panel h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            font-weight: 600;
+            color: #4b5563;
+            margin-bottom: 6px;
+            display: block;
+            font-size: 14px;
+        }
+        .form-control {
+            border-radius: 6px;
+            padding: 10px 12px;
+            border: 1px solid #d1d5db;
+            background-color: #fff;
+        }
+        .form-control:focus {
+            border-color: #10b981;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+        }
+        .form-control[readonly] {
+            background-color: #e5e7eb;
+            color: #6b7280;
+            cursor: not-allowed;
+        }
+        .divider {
+            border-top: 1px solid #e5e7eb;
+            margin: 30px 0;
+            opacity: 1;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 20px;
+        }
+        .btn-group-custom {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-custom {
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard-container">
+    <div class="page-card">
+        <h1 class="page-title">Employee Management Dashboard</h1>
+        <p class="page-subtitle">
+            Search for an employee by ID, review the record, and save updates directly to the SQLite Database.
+        </p>
+
+        <div class="quick-links">
+            <a href="#" class="btn btn-secondary btn-custom">View Employee List</a>
+        </div>
+
+        <div class="search-panel">
+            <h3>Fetch Employee Record</h3>
+            <div class="row align-items-end g-3">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label>Employee ID</label>
+                        <input type="text" class="form-control" placeholder="e.g. 1001" value="1001">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-primary btn-custom w-100" style="background-color: #4f46e5; border: none;">Fetch Record</button>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider" />
+
+        <h3 class="section-title">Employee Details</h3>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label>Employee ID</label>
+                <input type="text" class="form-control" value="1001" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" class="form-control" value="Ali Yahya Eker">
+            </div>
+
+            <div class="form-group">
+                <label>Department</label>
+                <input type="text" class="form-control" value="IT Department">
+            </div>
+
+            <div class="form-group">
+                <label>Position</label>
+                <input type="text" class="form-control" value="Software Developer">
+            </div>
+
+            <div class="form-group">
+                <label>Salary</label>
+                <input type="text" class="form-control" value="75000.00">
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" value="ali.yahya@example.com">
+            </div>
+        </div>
+
+        <div class="btn-group-custom">
+            <button type="button" class="btn btn-success btn-custom">Update & Save</button>
+            <button type="button" class="btn btn-secondary btn-custom">Clear Form</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

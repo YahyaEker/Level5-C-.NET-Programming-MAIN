@@ -1,0 +1,24 @@
+/* Finance Department Theme - Green (.theme-finance and assignment alias .theme-fin) */
+
+body.theme-finance,
+body.theme-fin {
+    --body-bg: #ecfdf5;
+    --text-color: #064e3b;
+    --header-bg: #047857;
+    --header-text: #ffffff;
+    --footer-bg: #065f46;
+    --footer-text: #a7f3d0;
+    --accent-color: #059669;
+    --heading-color: #065f46;
+    --link-color: #059669;
+    --link-hover: #047857;
+    --btn-primary-bg: #059669;
+    --btn-primary-hover: #047857;
+    --btn-success-bg: #10b981;
+    --btn-success-hover: #059669;
+    --card-bg: #ffffff;
+    --panel-bg: #d1fae5;
+    --panel-border: #6ee7b7;
+    --input-border: #6ee7b7;
+    --focus-ring: rgba(5, 150, 105, 0.25);
+}

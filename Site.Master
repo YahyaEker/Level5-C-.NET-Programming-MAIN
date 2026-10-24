@@ -1,0 +1,59 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="EmployeeManagement.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><asp:Literal ID="litPageTitle" runat="server" Text="Employee Information Management System" /></title>
+    <link runat="server" id="siteStylesheet" rel="stylesheet" type="text/css" />
+    <link runat="server" id="themeStylesheet" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body id="bodyElement" runat="server">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true" />
+        <div class="site-wrapper">
+            <header class="site-header">
+                <div class="header-inner">
+                    <div class="brand">
+                        <span class="brand-title">EIMS Portal</span>
+                        <span class="brand-subtitle">Employee Information Management System</span>
+                    </div>
+
+                    <nav class="site-nav" aria-label="Primary navigation">
+                        <ul>
+                            <!-- TECHNIQUE (d): Standard client-side link navigation -->
+                            <li runat="server" id="navDashboardItem" visible="false">
+                                <a href="Default.aspx">Dashboard</a>
+                            </li>
+                            <li runat="server" id="navEmployeeListItem" visible="false">
+                                <a href="EmployeeList.aspx">Employee List</a>
+                            </li>
+                            <li runat="server" id="navLoginItem" visible="false">
+                                <a href="Login.aspx">Login</a>
+                            </li>
+                            <li runat="server" id="navLogoutItem" visible="false">
+                                <a href="Logout.aspx">Logout</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <asp:Panel ID="pnlUserBadge" runat="server" Visible="false" CssClass="user-badge">
+                        Signed in as <strong><asp:Literal ID="litAdminName" runat="server" /></strong>
+                        (<asp:Literal ID="litDepartment" runat="server" />)
+                    </asp:Panel>
+                </div>
+            </header>
+
+            <main class="site-main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </main>
+
+            <footer class="site-footer">
+                <p>&copy; <%: DateTime.Now.Year %> Employee Information Management System. All rights reserved.</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
